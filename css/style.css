@@ -1,0 +1,136 @@
+@charset "UTF-8";
+
+@import url("font.css");
+
+html {-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;overflow-x: hidden;}
+body {-webkit-font-smoothing: antialiased;margin: 0;padding: 0; font-family: 'NunitoSans'; font-size: 16px; line-height: 24px; font-weight: normal; color: #787878; padding-top: 100px;}
+*, *:before, *:after {box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; outline: none;}
+img, span {border: none;}
+img {max-width: 100%; height: auto; vertical-align: top;}
+a { color: #10c9c3; text-decoration: none; -moz-transition: all 0.5s; -webkit-transition: all 0.5s; transition: all 0.5s;}
+a:hover { text-decoration:none; color: #191919; outline:none;}
+p {margin: 0 0 30px 0; letter-spacing: 0.08px;}
+p:last-child {margin: 0;}
+h1 {font-family: 'Montserrat'; font-size: 38px;line-height: 48px;font-weight: 600; margin: 0 0 25px 0; letter-spacing: 0.38px;}
+h2 {font-family: 'Montserrat'; font-size: 30px; line-height: 40px; font-weight: 600; margin: 0 0 20px 0;}
+
+.container {margin: 0 auto; padding:0 15px; max-width: 1200px; width: 100%;}
+
+.button {background: #10c9c3;border: none;cursor: pointer;transition: 400ms ease all;color: #fff;text-transform: uppercase;font-size: 14px;padding: 15px 30px;font-family: 'Montserrat';font-weight: 600;border-radius: 0;letter-spacing: 1.2px;display: inline-block;text-align: center;min-width: 180px;}
+.button:hover {background: #1d1d1d; color: #fff;}
+
+.site-header {position: fixed;left: 0;right: 0;top: 0;width: 100%;background-color: #fff;z-index: 99;}
+.site-header .header-row {display: flex;flex-wrap: wrap; align-items: center;}
+.site-header .header-row .site-logo {width: 32px;}
+.site-header .header-row .menu-right {width: calc(100% - 32px);padding: 0 0 0 20px;}
+.site-header .header-row .main-menu ul {list-style: none;padding: 0;margin: 0;display: flex;flex-flow: row wrap;justify-content: flex-end;}
+.site-header .header-row .main-menu ul li:not(:first-child) {margin: 0 0 0 30px;}
+.site-header .header-row .main-menu ul li a {color: #191919;font-family: 'Montserrat';font-weight: 600;text-transform: uppercase;font-size: 12px;line-height: 24px;letter-spacing: 1.2px;display: inline-block;padding: 38px 0;}
+.site-header .header-row .main-menu ul li.active a,
+.site-header .header-row .main-menu ul li a:hover {color: #10c9c3;}
+
+.nav-toggle {margin: 0;padding: 0;width: 45px;height: 45px;display: none;cursor: pointer;position: relative;float: right;z-index: 9;background: transparent;}
+.nav-toggle i, .nav-toggle i:after, .nav-toggle i:before {background-color: #182346;position: absolute;width:25px;height:2px;transition-timing-function: ease;transition-duration: .3s;transition-property: transform;border-radius: 0; left: 0; right: 0; margin: auto;}
+.nav-toggle i {transition-timing-function: cubic-bezier(.55,.055,.675,.19);transition-duration: 300ms;left: 0;top: 50%;display: block;margin-top: 0;}
+.nav-toggle i:after, .nav-toggle i:before {display: block;content: "";}
+.nav-toggle i:before {top: -7px;transition: top 300ms ease .15s,opacity 300ms ease;}
+.nav-toggle i:after {bottom: -7px;transition: bottom 300ms ease .15s,transform 300ms cubic-bezier(.55,.055,.675,.19);}
+.menu-open .nav-toggle i {transition-delay: .12s;transition-timing-function: cubic-bezier(.215,.61,.355,1);transform: rotate(45deg);-webkit-transform: rotate(45deg);-moz-transform: rotate(45deg);}
+.menu-open .nav-toggle i:before {top: 0;transition: top 300ms ease,opacity 300ms ease .15s;opacity: 0;}
+.menu-open .nav-toggle i:after {bottom: 0;transition: bottom 300ms ease,transform 300ms cubic-bezier(.215,.61,.355,1) .15s;transform: rotate(-90deg);}
+
+.home-banner-block {position: relative;}
+.home-banner-block .bg-img {position: absolute;left: 0;right: 0;top: 0;bottom: 0;width: 100%;height: 100%;}
+.home-banner-block .bg-img img {width: 100%;height: 100%;object-fit: cover;object-position: top center;}
+.home-banner-block .bg-img:before {content: '';position: absolute;left: 0;right: 0;top: 0;bottom: 0;width: 100%;height: 100%;background-color: #141414;opacity: 0.6;mix-blend-mode: multiply;}
+.home-banner-block .text-block {position: relative;z-index: 1;min-height: 350px;display: flex;align-items: center;justify-content: center;color: #fff;}
+.home-banner-block .text-block .inside {padding: 50px 0;text-align: center;max-width: 520px;margin: auto;}
+.home-banner-block .text-block .inside p {font-size: 18px;line-height: 28px;}
+
+.job-detail-block {background-color: #10c9c3;color: #fff; padding: 100px 0;}
+.job-detail-block .listing {margin: 0 -15px;display: flex;flex-flow: row wrap;}
+.job-detail-block .listing .text-col {width: 25%;padding: 0 15px;}
+.job-detail-block .listing .text-col .inside {position: relative;padding: 0 0 0 70px;}
+.job-detail-block .listing .text-col .inside .icon {position: absolute;left: 0;top: 0;bottom: 0;display: flex;align-items: center;justify-content: center;}
+.job-detail-block .listing .text-col .inside .content h5 {font-size: 18px;line-height: 30px;margin: 0;font-family: 'Montserrat';font-weight: 500;letter-spacing: 0.54px;}
+.job-detail-block .listing .text-col .inside .content p {font-family: 'Montserrat';font-weight: 500;font-size: 12px;line-height: 30px;letter-spacing: 1.2px;text-transform: uppercase;}
+
+.img-content-block {background-color: #f5f5f5;}
+.img-content-block .content-row {display: flex;flex-flow: row wrap;align-items: center;}
+.img-content-block .content-row .img-left {width: 50%;}
+.img-content-block .content-row .img-left img {width: 100%;}
+.img-content-block .content-row .text-block {width: 50%;padding: 80px 45px 80px 80px;}
+.img-content-block .content-row .text-block .inside {max-width: 455px;}
+.img-content-block .content-row .text-block h2 {color: #171717;}
+
+.cta-block {padding: 100px 0;}
+.cta-block .text-block {max-width: 540px; margin: auto; text-align: center;}
+.cta-block .text-block h2 {color: #1d1d1d;} 
+
+.site-footer {background-color: #141414;padding: 100px 0;}
+.site-footer .footer-row {display: flex;}
+.site-footer .footer-row .info-col {width: 40%;padding-right: 20px;}
+.site-footer .footer-row .info-col .text {max-width: 228px;color: #fff;}
+.site-footer .footer-row .info-col .text h3 {font-family: 'Montserrat';font-weight: 500;font-size: 18px;letter-spacing: 0.18px;margin: 0 0 25px 0;}
+.site-footer .footer-row .info-col .text p {color: #bcbcbc;font-size: 15px;line-height: 24px;letter-spacing: 0.075px;}
+.site-footer .footer-row .info-col .text p a {color: #bcbcbc;}
+.site-footer .footer-row .info-col .text p a:hover {color: #fff;}
+.site-footer ul {list-style: none;padding: 0;margin: 0;}
+.site-footer ul li a {color: #bcbcbc;font-size: 15px;line-height: 24px;letter-spacing: 0.075px;}
+.site-footer ul li a:hover {color: #fff;}
+.site-footer .footer-row .social-col {width: 20%;padding-left: 20px;}
+.site-footer .footer-row .social-col ul {max-width: 80px;margin-left: auto;}
+.site-footer .contact-text {margin-left: auto; width: 22%;}
+.site-footer .contact-text a {color: #bcbcbc;font-size: 15px;line-height: 24px;letter-spacing: 0.075px;}
+.site-footer .contact-text a:hover {color: #fff;}
+.site-footer .contact-text .phone {font-family: 'WorkSans';}
+.site-footer .footer-menu {padding-left: 50px;}
+
+
+/*** Responsive css start ***/
+
+@media screen and (max-width: 1199px) {
+	.img-content-block .content-row .text-block {padding: 40px 20px;}
+	.job-detail-block .listing .text-col {width: 50%; margin-bottom: 50px;}
+	.job-detail-block {padding: 100px 0 60px 0;}
+	.job-detail-block .listing {padding: 0 100px;}
+}
+
+@media screen and (max-width: 991px) {
+	.img-content-block .content-row .img-left {width: 100%;}
+	.img-content-block .content-row .text-block {width: 100%; padding: 50px;}
+	.img-content-block .content-row .text-block .inside {max-width: 100%;}
+	.job-detail-block .listing {padding: 0 50px;}
+}
+
+@media screen and (max-width: 767px) {
+	body {padding-top: 75px;}
+	h1 {font-size: 30px; line-height: 40px; margin: 0 0 20px 0;}
+	h2 {font-size: 24px; line-height: 34px;}
+	.button {padding: 10px 28px; min-width: 160px;}
+	.cta-block {padding: 60px 0;}
+	.site-footer {padding: 50px 0;}
+	.site-footer .footer-row > div:not(:last-child) {margin-bottom: 20px;}
+	.site-footer .footer-row {flex-flow: row wrap; text-align: center;}
+	.site-footer .footer-row .info-col {width: 100%; padding: 0;}
+	.site-footer .contact-text {width: 100%;}
+	.site-footer .footer-menu {padding: 0; width: 100%;}
+	.site-footer .footer-row .social-col {width: 100%; padding: 0;}
+	.site-footer .footer-row .social-col ul {max-width: 100%;}
+	.site-footer .footer-row .info-col .text {margin: auto;}
+	.img-content-block .content-row .text-block {padding: 40px 15px;}
+	.job-detail-block {padding: 50px 0;}
+	.job-detail-block .listing {padding: 0;}
+	.job-detail-block .listing .text-col {width: 100%;margin-bottom: 35px;}
+	.job-detail-block .listing .text-col .inside {padding: 0; text-align: center;}
+	.job-detail-block .listing .text-col .inside .icon {position: static;margin-bottom: 12px;}
+	.job-detail-block .listing .text-col:last-child {margin-bottom: 0;}
+	.nav-toggle {display: block;}
+	.site-header .header-row .main-menu {display: none; position: fixed;left: 0;right: 0;top: 74px;bottom: 0;width: 100%;height: calc(100vh - 74px);overflow: auto;background-color: #fff;border-top: 1px solid #ccc;}
+	.menu-open .site-header .header-row .main-menu {display: block;}
+	.site-header .header-row {padding: 15px 0;}
+	.site-header .header-row .main-menu ul {justify-content: flex-start;padding: 22px 20px;}
+	.site-header .header-row .main-menu ul li:not(:first-child) {margin: 0 0 10px 0;}
+	.site-header .header-row .main-menu ul li {width: 100%; margin: 0 0 10px 0;}
+	.site-header .header-row .main-menu ul li a {padding: 8px 0; display: block;}
+}
